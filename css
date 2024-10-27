@@ -1,6 +1,3 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
 @font-face {
     font-family: 'Terminal Grotesque';
     src: url('https://mordictionary.neocities.org/terminal-grotesque.eot'); /* IE9 Compat Modes */
@@ -9,16 +6,16 @@
          url('https://mordictionary.neocities.org/terminal-grotesque.woff') format('woff'), /* Pretty Modern Browsers */
          url('https://mordictionary.neocities.org/terminal-grotesque.ttf') format('truetype'), /* Safari, Android, iOS */
          url('https://mordictionary.neocities.org/terminal-grotesque.svg#TerminalGrotesque') format('svg'); /* Legacy iOS */
-    font-weight: normal; /* or 'bold', depending on your font file */
-    font-style: normal; /* or 'italic', depending on your font file */
+    font-weight: normal; 
+    font-style: normal;
 }
 
 /* Font Family */
 body {
-    font-family: 'Terminal Grotesque', sans-serif; /* Ensure you have the font loaded */
+    font-family: 'Terminal Grotesque', sans-serif;
     line-height: 1.6; /* Better readability */
     color: #a1e5de; /* Default text color */
-    background-image: url('https://i.imgur.com/6xpyAnC.png');
+    background-image: url('https://mordictionary.neocities.org/Images/Ocean%20book%20background%20tile.gif'); 
     background-repeat: repeat; /* This tiles the image */
     background-size: 250px; /* Adjusts the size of the tile */
     background-color: #080808; /* Fallback color */
@@ -120,14 +117,21 @@ code {
 
 #header-container {
     position: relative; /* Allow absolute positioning of children */
+    margin-bottom: 420px;
+}
+#header-container::after {
+    content: "";
+    display: table;
+    clear: both;
+    
 }
 
+
 #box1 {
-    position: relative;
+    position: absolute;
     width: 100%; /* Fills the container width */
     min-height: 100%;
-    margin: 0px auto 65px 0px; /* Ensure box1 is centered */
-    top: 50px
+  top: 55px;
 }
 
 #header {
@@ -142,14 +146,12 @@ code {
 
 #linkity {
     position: absolute;
-    top: 300px; /* Adjust this to place it within the header */
-    left: 7px;
-    width: 75%; /* Adjust as needed */
+    top: 3px; /* Adjust to position it under the header */
+    width: 100%; /* Adjust as needed */
     line-height: 30px;
     text-align: center;
     z-index: 1; /* Set a lower z-index for linkity to place it behind the header */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background for better visibility */
-    padding: 10px; /* Optional: Add some padding */
+  
     border-radius: 5px; /* Optional: Round the corners */
 }
 
@@ -237,10 +239,11 @@ nav a:hover {
 
 .content-wrapper {
     max-width: 1344px;
-    margin: 0 auto;
+    margin: 100px auto 0; /* Increase top margin */
     padding: 20px;
     display: flex; /* Use Flexbox for layout */
 }
+
 
 .main-content {
     flex-grow: 1;
