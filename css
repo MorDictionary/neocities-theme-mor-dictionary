@@ -1,0 +1,283 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@font-face {
+    font-family: 'Terminal Grotesque';
+    src: url('https://mordictionary.neocities.org/terminal-grotesque.eot'); /* IE9 Compat Modes */
+    src: url('https://mordictionary.neocities.org/terminal-grotesque.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://mordictionary.neocities.org/terminal-grotesque.woff2') format('woff2'), /* Super Modern Browsers */
+         url('https://mordictionary.neocities.org/terminal-grotesque.woff') format('woff'), /* Pretty Modern Browsers */
+         url('https://mordictionary.neocities.org/terminal-grotesque.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://mordictionary.neocities.org/terminal-grotesque.svg#TerminalGrotesque') format('svg'); /* Legacy iOS */
+    font-weight: normal; /* or 'bold', depending on your font file */
+    font-style: normal; /* or 'italic', depending on your font file */
+}
+
+/* Font Family */
+body {
+    font-family: 'Terminal Grotesque', sans-serif; /* Ensure you have the font loaded */
+    line-height: 1.6; /* Better readability */
+    color: #a1e5de; /* Default text color */
+    background-image: url('https://i.imgur.com/6xpyAnC.png');
+    background-repeat: repeat; /* This tiles the image */
+    background-size: 250px; /* Adjusts the size of the tile */
+    background-color: #080808; /* Fallback color */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: bold; /* Adjust weight if necessary */
+    margin: 20px 0; /* Spacing around headings */
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 14px 0;
+}
+
+h5 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1em; /* Base font size */
+    margin: 10px 0; /* Spacing around paragraphs */
+}
+
+/* Links */
+a {
+    color: #00f0dd; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+a:hover {
+    color: #007b7f; /* Color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Lists */
+ul, ol {
+    margin: 10px 0; /* Spacing around lists */
+    padding-left: 20px; /* Indent lists */
+}
+
+/* Blockquotes */
+blockquote {
+    font-style: italic; /* Italic style for quotes */
+    margin: 20px 0; /* Spacing around blockquotes */
+    padding-left: 20px; /* Indent blockquotes */
+    border-left: 4px solid #00f0dd; /* Visual cue */
+}
+
+/* Code Blocks */
+code {
+    font-family: monospace; /* Monospace font for code */
+    background-color: #f4f4f4; /* Light background for code */
+    padding: 2px 4px; /* Padding for code */
+    border-radius: 3px; /* Rounded corners for code */
+}
+
+/* Custom Classes */
+.small-text {
+    font-size: 0.875em; /* Smaller text */
+}
+
+.large-text {
+    font-size: 1.125em; /* Larger text */
+}
+
+.center-text {
+    text-align: center; /* Center alignment */
+}
+
+* {
+    box-sizing: border-box; /* Applies to all elements */
+}
+
+#header-container {
+    position: relative; /* Allow absolute positioning of children */
+}
+
+#box1 {
+    position: relative;
+    width: 100%; /* Fills the container width */
+    min-height: 100%;
+    margin: 0px auto 65px 0px; /* Ensure box1 is centered */
+    top: 50px
+}
+
+#header {
+    height: 350px;
+    width: 100%; /* Fills box1 width */
+    background-image: url('https://mordictionary.neocities.org/Images/Header%20Image%201%20MorDictionary.png');
+    border: 2px solid #a1e5de;
+    border-radius: 8px;
+    position: relative; /* Ensure it can use z-index */
+    z-index: 2; /* Set a higher z-index for the header */
+}
+
+#linkity {
+    position: absolute;
+    top: 300px; /* Adjust this to place it within the header */
+    left: 7px;
+    width: 75%; /* Adjust as needed */
+    line-height: 30px;
+    text-align: center;
+    z-index: 1; /* Set a lower z-index for linkity to place it behind the header */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background for better visibility */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 5px; /* Optional: Round the corners */
+}
+
+
+/* Other styles remain unchanged */
+
+
+#linkity a {
+    display: inline-block; /* Keeps the links as blocks */
+    padding: 10px 20px; /* Add padding for better spacing */
+    background-color: rgba(0, 240, 221, 0.8); /* Adjusted for opacity */
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 2px solid #a1e5de;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+#linkity a:hover {
+    background-color: rgba(35, 0, 35, 0.4);
+    border-bottom: 1px solid #fff;
+    transition: .4s;
+}
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00030c;
+    color: #51edf3;
+    text-decoration: none;
+    border: 2px solid #0e5a99;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #166bb0;
+    transform: scale(1.05);
+}
+.hero-title {
+    text-align: center; /* Center the heading text */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2em; /* Larger font size */
+}
+
+.image-gallery {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping of images to the next line */
+    justify-content: center; /* Center images in the gallery */
+    gap: 20px; /* Space between images */
+}
+
+.image-row {
+    display: flex;
+    width: 100%;
+}
+
+.image-row a {
+    flex: 1 1 33.33%; /* Allows 3 images per row */
+    max-width: 400px; /* Set a maximum width for each image */
+    text-align: center; /* Centers images in the row */
+}
+
+.homepage-image {
+    border: 2px solid #a1e5de; /* Add a solid border */
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 2px;
+    display: block; /* Ensures no extra space below the image */
+}
+
+
+.content-wrapper {
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex; /* Use Flexbox for layout */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px; /* Increased padding */
+    background-color: #000201;
+    border-radius: 8px;
+    border-width: 20px; /* Border width */
+    border: 2px solid #a1e5de;
+    box-sizing: border-box;
+}
+/* Footer Styles */
+.footer-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #000201; 
+    color: #ececeb;
+    padding: 30px 0;
+     border: 2px solid #a1e5de;
+      border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+.footer-container a {
+    color: #ececeb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-container a:hover {
+    color: #ffffff;
+}
+.copyright {
+    font-size: 0.9em;
+    color: #ececeb;
+}
+.footer-column a:last-of-type {
+    margin-top: 15px; 
+    display: inline-block; 
+}
